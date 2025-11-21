@@ -317,16 +317,16 @@ const MyAppointments = () => {
             return;
         }
         //from here
-        const appointmentDate = new Date(appointment.date);
-        const [hours, minutes] = appointment.startTime.split(':').map(Number);
-        appointmentDate.setHours(hours, minutes, 0, 0);
-        const now = new Date();
-        const canJoinTime = new Date(appointmentDate.getTime() - 10 * 60000);
-        if (now < canJoinTime) {
-            const timeUntil = Math.floor((canJoinTime.getTime() - now.getTime()) / 60000);
-            alert(`Video call will be available in ${timeUntil} minutes`);
-            return;
-        }
+        // const appointmentDate = new Date(appointment.date);
+        // const [hours, minutes] = appointment.startTime.split(':').map(Number);
+        // appointmentDate.setHours(hours, minutes, 0, 0);
+        // const now = new Date();
+        // const canJoinTime = new Date(appointmentDate.getTime() - 10 * 60000);
+        // if (now < canJoinTime) {
+        //     const timeUntil = Math.floor((canJoinTime.getTime() - now.getTime()) / 60000);
+        //     alert(`Video call will be available in ${timeUntil} minutes`);
+        //     return;
+        // }
         //to here
         setSelectedAppointment(appointment);
         setIsVideoCallOpen(true);
